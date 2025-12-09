@@ -1,0 +1,21 @@
+import { Card, Col } from "react-bootstrap";
+
+export default function Cards(noticia){
+    return <>
+        <Col key={noticia.idnoticia}>
+            <Card className="mb-3" style={{ width: '100%' }}>
+                <Card.Header className="text-center fw-bold"><a href={`/noticias/${noticia.idnoticia}`}> {noticia.titulonoticia}</a></Card.Header>
+                <Card.Body>
+                    <Card.Title className="text-capitalize">
+                        <a href={`/noticias/tipo/${noticia.tiponoticia}`}>
+                        {noticia.tiponoticia}
+                        </a>
+                    </Card.Title>
+                    <Card.Text>{noticia.conteudonoticia}
+                    </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-muted">{new Date(noticia.datahoracadastro).toLocaleString("pt-BR")}</Card.Footer>
+            </Card>
+        </Col>
+    </>
+}

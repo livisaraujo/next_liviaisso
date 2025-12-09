@@ -1,0 +1,9 @@
+.degradeMenu {
+  background: #2a7b9b;
+  background: linear-gradient(
+    180deg,
+    rgb(41, 96, 117) 0%,
+    rgb(18, 61, 110) 50%,
+    rgb(3, 11, 121) 100%
+  );
+}
